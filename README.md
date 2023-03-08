@@ -9,4 +9,4 @@ Inside the models folder, put a file named "tokens.json" with the follow estruct
 }
 ```
 
-Put your own clients id's provided by Spotify Dashboard
+Put your own clients id's provided by [Spotify Dashboard](https://developer.spotify.com/dashboard/)
