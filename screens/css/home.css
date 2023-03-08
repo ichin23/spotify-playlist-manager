@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+#navbar{
+    background-color: indigo;
+    position: fixed;
+    width: 100vw;
+}
+
+#logo{
+    color: white
+}
+
+#login{
+    color: white;
+    
+}
+
+#content{
+    padding-top: 8vh;
+    width: 95vw;
+    height: calc(100vh -50px);
+    display: flex;
+    flex-direction: row;
+
+}
+
+#home{
+    width: 80%;
+    padding-left: calc(20vw + 20px);
+}
+
+#menu{
+    padding: 10px;
+    margin:8px;
+    width: 20%;
+    height: 90vh;
+    position: fixed;
+    border-radius: 8px;
+    border: 2px solid rgb(41, 40, 40);
+}
+
+.nav-link.active{
+    background-color: rgb(115, 2, 197) !important;
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+
+.imgPlaylist{
+    width:30px;
+}
+
+.list-group-item{
+    border-color: black;
+    color: white;
+    background-color: rgb(58, 58, 58);
+}
+
+.imgPlaylist{
+    margin-right: 10px;
+}
+
+.list-group-item:hover{
+    background-color: rgb(37, 37, 37);
+}
