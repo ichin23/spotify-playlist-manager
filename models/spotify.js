@@ -113,7 +113,7 @@ function getPlaylists() {
 
 async function getRecomendations(artists, genres, tracks, features) {
   var params = new URLSearchParams({seed_artists: artists, seed_genres: genres, seed_tracks:tracks})
-  var response=  await fetch("https://api.spotify.com/v1/recommendations?"+params,{headers: {
+  var response=  await fetch("https://api.spotify.com/v1/recommendations",{headers: {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + getToken(),
   },});

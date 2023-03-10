@@ -5,7 +5,8 @@ body{
 
 #navbar{
     background-color: indigo;
-    position: fixed;
+    position: sticky;
+    top:0;
     width: 100vw;
 }
 
@@ -19,17 +20,17 @@ body{
 }
 
 #content{
-    padding-top: 8vh;
+    
     width: 95vw;
     height: calc(100vh -50px);
     display: flex;
     flex-direction: row;
-
+    
 }
 
 #home{
     width: 80%;
-    padding-left: calc(20vw + 20px);
+    padding-left: 20px;
 }
 
 #menu{
@@ -37,7 +38,8 @@ body{
     margin:8px;
     width: 20%;
     height: 90vh;
-    position: fixed;
+    position: sticky;
+    top:65px;
     border-radius: 8px;
     border: 2px solid rgb(41, 40, 40);
 }

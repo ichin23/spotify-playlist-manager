@@ -9,25 +9,20 @@ async function getTracks(hrefTracks) {
   });
   const response_1 = await response.json();
   var tracksIds = [];
-  var genres =[];
+  var genres = [];
   var artists = [];
   for (let musicJson of response_1.items) {
-    
-    if(tracksIds.length<2){
+    if (
+      artists.indexOf(musicJson.track.artists[0].id) === -1 &&
+      artists.length < 5
+    ) {
+      tracksIds.push(musicJson.track.id);
 
-        tracksIds.push(musicJson.track.id);
-    }
-    if(artists.length<2){
+      artists.push(musicJson.track.artists[0].id);
 
-        artists.push(musicJson.track.artists[0].id)
-    }
-    if(genres.length<2){
+      var genresSearch = await getGenres(musicJson.track.artists[0].id);
 
-        var genresSearch = await getGenres(musicJson.track.artists[0].id);
-        genresSearch.forEach((genre)=>{
-            console.log(genre);
-            genres.indexOf(genre) === -1 ? genres.push(genre):null
-        })
+      genres.push(genresSearch[0]);
     }
     var img = document.createElement("img");
     img.classList.add("imgPlaylist");
@@ -58,11 +53,11 @@ async function getTracks(hrefTracks) {
     li.appendChild(icon);
     document.getElementById("musicas").appendChild(li);
   }
-  console.log(artists.join(","))
+  console.log(artists.join(","));
   return {
     tracksIds: tracksIds,
     artists: artists,
-    genres: genres
+    genres: genres,
   };
 }
 
